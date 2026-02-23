@@ -1,0 +1,295 @@
+html { scroll-behavior: smooth; }
+
+html{
+  scroll-padding-top: 64px; /* ヘッダーの高さ */
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    line-height: 1.7;
+  }
+
+  .container {
+    width: min(1000px, 92%);
+    margin: 0 auto;
+  }
+  
+  .header, .footer {
+    padding: 16px 0;
+  }
+
+  .header{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #fff;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+  }
+  
+  .header_inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+  }
+  
+  .logo{
+    margin: 0;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+  }
+  
+  .header_nav{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .header_link{
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 14px;
+    border-radius: 10px;
+    text-decoration: none;
+    background: #1e5eff;
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+  }
+  
+  .header_link:hover{
+    transform: translateY(-1px);
+    opacity: 0.92;
+  }
+
+  .hero {
+    padding: 64px 0;
+    background: linear-gradient(180deg, #f5f8ff 0%, rgba(245,248,255,0) 100%);
+  }
+
+  .hero_inner{
+    max-width: 720px;
+  }
+
+  
+  .hero_title {
+    margin: 0 0 8px;
+    font-size: 32px;
+  }
+  
+  .hero_lead {
+    margin: 0 0 16px;
+  }
+
+  .section {
+    padding: 48px 0;
+  }
+  
+  .section-alt {
+    background: #f5f8ff; /* 青系の薄い背景 */
+    margin-top: 64px
+  }
+  
+  .section_title {
+    margin: 0 0 16px;
+    font-size: 24px;
+  }
+  
+  .list {
+    margin: 0;
+    padding-left: 18px;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 12px 18px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .btn:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(30,94,255,0.25);
+  }
+  
+  .btn-primary {
+    background: #1e5eff;
+    color: #fff;
+  }
+
+  .form {max-width:640px;}
+  .form_row {margin-top:16px;}
+  label {display: block; margin-bottom:6px;}
+  input,textarea{
+    width:100%;
+    padding:12px; 
+    border:1px solid #ccc;
+    border-radius:10px;
+    box-sizing:border-box;
+  }
+  .req{font-size:0.9em;}
+
+  .reason_wrapper{
+    display: flex;
+    gap:24px;
+    margin-top:32px;
+  }
+
+  .reason_card{
+    flex:1;
+    background: #ffffff;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.25);
+
+    display: flex;
+    flex-direction:column;
+  }
+
+  .reason_title{
+    margin-bottom:12px;
+    font-size:18px;
+  }
+
+  .reason_card:hover{
+    transform:translateY(-4px);
+    transition:0.2s;
+  }
+
+  @media (max-width: 900px) {
+    .reason_wrapper {
+      flex-direction: column;
+    }
+  }
+
+  .flow_wrapper{
+    display:grid;
+    grid-template-columns: repeat(5,1fr);
+    gap:16px;
+    margin-top:32px;
+  }
+
+  .flow_card{
+    background: #fff;
+    padding:20px;
+    border-radius: 12px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.25);
+  }
+
+  .flow_step{
+    margin:0 0 8px;
+    font-weight:900;
+    letter-spacing: 0.5em;
+    color:#1e5eff; /*青系*/
+  }
+
+  .flow_title{
+    margin:0 0 8px;
+    font-size:16px;
+  }
+
+  .flow_text{
+    margin:0;
+    font-size:14px;
+  }
+
+  @media(max-width:900px){
+    .flow_wrapper{
+      grid-template-columns: repeat(2,1fr);
+    }
+  }
+
+  @media(max-width:520px){
+    .flow_wrapper{
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .price_card{
+    margin:32px auto 0;
+    background: #fff;
+    padding:32px;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.05);
+    max-width:720px;
+  }
+
+  .price_title{
+    margin:0 0 16px;
+    font-size:16px;
+  }
+
+  .price_value{
+    margin:0 0 16px;
+  }
+
+  .price_yen{
+    font-size:32px;
+    font-weight:700;
+    color:#1e5eff;
+  }
+
+  .price_list{
+    margin:0;
+    padding-left:18px;
+  }
+
+  .price_small{
+    margin:16px;
+    font-size:14px;
+    opacity: 0.85;
+  }
+
+  @media(max-width:520px){
+    .price_card{padding:24px;}
+    .price_yen{font-size:28px;}
+  }
+
+  .footer{
+    margin-top:80px;
+    background: #1e2a3a;
+    color:#fff
+  }
+
+  .footer_inner{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    padding:32px 0;
+  }
+
+  .footer_logo{
+    margin:0 0 8px;
+    font-weight:700;
+  }
+
+  .footer_text{
+    margin:0;
+    opacity:0.8;
+    font-size:14px;
+  }
+
+  .footer_bottom{
+    border-top:1px solid rgba(255,255,255,0.2);
+    text-align:center;
+    padding:16px 0;
+  }
+
+  .footer_copy{
+    margin: 0;
+    font-size: 14px;
+    opacity: 0.7;
+  }
+
+  @media(max-width:520px){
+    .footer_inner{
+      flex-direction: column;
+      gap: 16px;
+      text-align: center;
+    }
+  }
+
+
